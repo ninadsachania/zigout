@@ -194,14 +194,14 @@ pub fn main() !void {
         }
 
         bar_dx = 0;
-        if (keyboard[c.SDL_SCANCODE_A] != 0) {
+        if (keyboard[c.SDL_SCANCODE_A] != 0 or keyboard[c.SDL_SCANCODE_LEFT] != 0) {
             bar_dx += -1;
             if (!started) {
                 started = true;
                 proj_dx = -1;
             }
         }
-        if (keyboard[c.SDL_SCANCODE_D] != 0) {
+        if (keyboard[c.SDL_SCANCODE_D] != 0 or keyboard[c.SDL_SCANCODE_RIGHT] != 0) {
             bar_dx += 1;
             if (!started) {
                 started = true;
